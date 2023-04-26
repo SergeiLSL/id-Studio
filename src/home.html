@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"HomePage Id Studio"
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+
+         <section class="page__about about-page">
+            <div class="about-page__container">
+               <div class="about-page__body">
+                  <div class="about-page__column-title">
+                     <h2 class="about-page__title title">
+                        About <span>Studio</span>
+                     </h2>
+                  </div>
+                  <div class="about-page__column-text">
+                     <div class="about-page__text text">
+                        <p>
+                           Interiart is an award-winning architecture and interior design practice based in NYC. We work
+                           internationally on projects of residential & commercial interior design that require a
+                           creative
+                           approach. Our talented and experienced designers leverage their knowledge and expertise to
+                           create unique and comfortable interiors for you.
+                        </p>
+                        <p>
+                           Our team knows that interior design can be stressful for the client and we do our best to
+                           make
+                           it as easy as possible. We listen to your needs, ideas, and inputs. And most importantly, we
+                           make it exciting and enjoyable for our clients.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <section class="page__services services">
+            <div class="services__container">
+               <div class="services__inner">
+                  <h2 class="services__title title">
+                     Our <span>Services</span>
+                  </h2>
+                  <div class="services__row">
+                     <div class="services__card card" data-aos="fade-down">
+                        <div class="card__image">
+                           <img src="img/services/01-icon.svg" width="90.12" height="89.75" alt="Icon">
+                        </div>
+
+                        <h3 class="card__title">
+                           INTERIOR DESIGN
+                        </h3>
+                        <p class="card__text">
+                           Interior design services offer a vast variety of solutions for our clients’ homes and
+                           offices.
+                        </p>
+                     </div>
+                     <div class="services__card card" data-aos="fade-down">
+                        <div class="card__image">
+                           <img src="img/services/02-icon.svg" width="110.28" height="73.26" alt="Icon">
+                        </div>
+                        <h3 class="card__title">
+                           DECORATIVE SERVICES
+                        </h3>
+                        <p class="card__text">
+                           Our professional decorators will be happy to help you change your house’s inner look.
+                        </p>
+                     </div>
+                     <div class="services__card card" data-aos="fade-down">
+                        <div class="card__image">
+                           <img src="img/services/03-icon.svg" width="88" height="85" alt="Icon">
+                        </div>
+                        <h3 class="card__title">
+                           SPACE PLANNING
+                        </h3>
+                        <p class="card__text">
+                           We create better interior experiences through our space planning services.
+                        </p>
+                     </div>
+                     <div class="services__card card" data-aos="fade-down">
+                        <div class="services__card card" data-aos="fade-down">
+                           <div class="card__image">
+                              <img src="img/services/04-icon.svg" width="74.85" height="74.83" alt="Icon">
+                           </div>
+                           <h3 class="card__title">
+                              PROJECT MANAGEMENT
+                           </h3>
+                           <p class="card__text">
+                              We provide proper project management as it’s one of the main success factors in interior
+                              design.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <section class="page__portfolio portfolio none">
+            <div class="portfolio__container">
+               <h2 class="portfolio__title title">
+                  Our <span>Portfolio</span>
+               </h2>
+               <div class="portfolio__filter filter-portfolio">
+                  <button data-filter="*" class="filter-portfolio__item text-nav active" type="button">
+                     All
+                  </button>
+                  <button data-filter="comercial" class="filter-portfolio__item text-nav" type="button">
+                     COMERCIAL
+                  </button>
+                  <button data-filter="residential" class="filter-portfolio__item text-nav" type="button">
+                     RESIDENTIAL
+                  </button>
+                  <button data-filter="office" class="filter-portfolio__item text-nav" type="button">
+                     OFFICE
+                  </button>
+                  <button data-filter="other" class="filter-portfolio__item text-nav" type="button">
+                     OTHER
+                  </button>
+               </div>
+               <div class="portfolio__items">
+                  <div data-filter="comercial" class="portfolio__item article">
+                     <a href="#" class="article__image">
+                        <img src="@img/portfolio/03-comercial.jpg" alt="">" alt="Image">
+                     </a>
+                  </div>
+                  <div data-filter="residential" class="portfolio__item article">
+                     <a href="#" class="article__image">
+                        <img src="@img/portfolio/07-residental.jpg" alt="">" alt="Image">
+                     </a>
+                  </div>
+                  <div data-filter="other" class="portfolio__item article">
+                     <a href="#" class="article__image">
+                        <img src="@img/portfolio/04-other.jpg" alt="">" alt="Image">
+                     </a>
+                  </div>
+                  <div data-filter="comercial" class="portfolio__item article">
+                     <a href="#" class="article__image">
+                        <img src="@img/portfolio/05-comercial.jpg" alt="">" alt="Image">
+                     </a>
+                  </div>
+                  <div data-filter="residential" class="portfolio__item article">
+                     <a href="#" class="article__image">
+                        <img src="@img/portfolio/08-residental.jpg" alt="">" alt="Image">
+                     </a>
+                  </div>
+                  <div data-filter="office" class="portfolio__item article">
+                     <a href="#" class="article__image">
+                        <img src="@img/portfolio/06-office.jpg" alt="">" alt="Image">
+                     </a>
+                  </div>
+                  <div data-filter="other" class="portfolio__item article">
+                     <a href="#" class="article__image">
+                        <img src="@img/portfolio/01-other.jpg" alt="">" alt="Image">
+                     </a>
+                  </div>
+                  <div data-filter="other" class="portfolio__item article">
+                     <a href="#" class="article__image">
+                        <img src="@img/portfolio/02-other.jpg" alt="">" alt="Image">
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+			<section class="page__price price">
+				<div class="price__container">
+					<div class="price__content">
+						<div class="price__begins">
+							<h2 class="price__title title">Our <span>Pricing</span></h2>
+						</div>
+						<div class="price__prices prices">
+							<div class="prices__row">
+								<!--будущий flex-контейнер-->
+								<div class="prices__column">
+									<!--колонки-->
+									<!--создаем саму карточку flex-элемент-->
+                           <div class="prices__item">
+										<div class="prices__card card">
+                                 <div class="card__subtitle">Basic</div>
+                                 <div class="card__payment">
+                                    <div class="card__price">$25</div>
+                                    <div class="card__period">per month</div>
+                                 </div>  
+                                 <div class="prices__terms terms">
+                                    <div class="terms__text">Interior Design</div>
+                                    <div class="terms__text">Project Discussion</div>
+                                    <div class="terms__text">Space Planning</div>
+                                    <div class="terms__text">Online Consultation</div>
+                                 </div>                       
+                              </div>
+                              <a href="" class="prices__button">buy now</a> 
+                           </div>
+								</div>
+
+                        <div class="prices__column">
+									<!--колонки-->
+									<!--создаем саму карточку flex-элемент-->
+                           <div class="prices__item">
+										<div class="prices__card card">
+                                 <div class="card__subtitle">Standart</div>
+                                 <div class="card__payment">
+                                    <div class="card__price">$50</div>
+                                    <div class="card__period">per month</div>
+                                 </div>  
+                                 <div class="prices__terms terms">
+                                    <div class="terms__text">Color Analysis</div>
+                                    <div class="terms__text">Space Planning</div>
+                                    <div class="terms__text">Home Remodeling</div>
+                                    <div class="terms__text">3D Interior Model</div>
+                                 </div>                     
+                              </div>
+                              <a href="" class="prices__button">buy now</a> 
+                           </div>
+								</div>
+
+                        <div class="prices__column">
+									<!--колонки-->
+									<!--создаем саму карточку flex-элемент-->
+                           <div class="prices__item">
+										<div class="prices__card card">
+                                 <div class="card__subtitle">Premium</div>
+                                 <div class="card__payment">
+                                    <div class="card__price">$80</div>
+                                    <div class="card__period">per month</div>
+                                 </div>  
+                                 <div class="prices__terms terms">
+                                    <div class="terms__text">Concept Development</div>
+                                    <div class="terms__text">Decoration Services</div>
+                                    <div class="terms__text">Interior Architecture</div>
+                                    <div class="terms__text">Flooring Installation</div>
+                                 </div>                        
+                              </div>
+                              <a href="" class="prices__button">buy now</a> 
+                           </div>
+								</div>
+							</div>
+						</div>
+					</div>
+            </div>
+			</section>
+
+
+      </main>
+      @@include('html/_footer.htm',{})
+   </div>
+   @@include('html/_js.htm',{})
+</body>
+
+</html>

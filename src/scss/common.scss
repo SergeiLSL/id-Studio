@@ -1,0 +1,40 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.none {
+   display: none;
+}
+
+
+.title {
+   font-family: "BN Chester Regular";
+   font-size: rem(40);
+   line-height: 102.5%; /* 41/40 */
+   color: $mainColor;
+   span {
+      color: $pageColor;
+   }
+}
+
+.text {
+   font-weight: "Gilroy";
+   font-size: rem(16);
+   line-height: 170%; /* 39/40 */
+   color: $mainColor;
+}
+
+.text-nav {
+   font-weight: "Gilroy";
+   font-size: rem(16);
+   line-height: 118.75%; /* 19/16 */
+   color: $mainColor;
+}
+
+.btn {
+   display: inline-block;
+   font-weight: "Gilroy";
+   font-size: rem(16);
+   line-height: 150%; /* 24/16 */
+   text-transform: uppercase;
+   padding: rem(12) rem(34);
+   border: rem(2) solid $pageColor;
+   border-radius: rem(8);
+}
