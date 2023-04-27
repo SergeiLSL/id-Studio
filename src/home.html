@@ -18,7 +18,7 @@
                      </h2>
                   </div>
                   <div class="about-page__column-text">
-                     <div class="about-page__text text">
+                     <!-- <div class="about-page__text text">
                         <p>
                            Interiart is an award-winning architecture and interior design practice based in NYC. We work
                            internationally on projects of residential & commercial interior design that require a
@@ -32,6 +32,26 @@
                            it as easy as possible. We listen to your needs, ideas, and inputs. And most importantly, we
                            make it exciting and enjoyable for our clients.
                         </p>
+                     </div> -->
+
+                     <div data-showmore data-showmore-media="768,max" class="block about-page__text text">
+                        <div data-showmore-content="109" class="block__content text">
+                           <p>
+                              Interiart is an award-winning architecture and interior design practice based in NYC. We work
+                              internationally on projects of residential & commercial interior design that require a
+                              creative
+                              approach. Our talented and experienced designers leverage their knowledge and expertise to
+                              create unique and comfortable interiors for you.
+                           </p>
+                           <p>
+                              Our team knows that interior design can be stressful for the client and we do our best to
+                              make
+                              it as easy as possible. We listen to your needs, ideas, and inputs. And most importantly, we
+                              make it exciting and enjoyable for our clients.
+                           </p>
+                        </div>
+                        <button hidden data-showmore-button type="button" class="block__more about-page__btn">
+                           <span>READ MORE</span><span>hide</span></button>
                      </div>
                   </div>
                </div>
@@ -42,56 +62,65 @@
             <div class="services__container">
                <div class="services__inner">
                   <h2 class="services__title title">
-                     Our <span>Services</span>
+                     <p>Our<span> Services</span></p>
                   </h2>
                   <div class="services__row">
-                     <div class="services__card card" data-aos="fade-down">
-                        <div class="card__image">
-                           <img src="img/services/01-icon.svg" width="90.12" height="89.75" alt="Icon">
-                        </div>
-
-                        <h3 class="card__title">
-                           INTERIOR DESIGN
-                        </h3>
-                        <p class="card__text">
-                           Interior design services offer a vast variety of solutions for our clients’ homes and
-                           offices.
-                        </p>
-                     </div>
-                     <div class="services__card card" data-aos="fade-down">
-                        <div class="card__image">
-                           <img src="img/services/02-icon.svg" width="110.28" height="73.26" alt="Icon">
-                        </div>
-                        <h3 class="card__title">
-                           DECORATIVE SERVICES
-                        </h3>
-                        <p class="card__text">
-                           Our professional decorators will be happy to help you change your house’s inner look.
-                        </p>
-                     </div>
-                     <div class="services__card card" data-aos="fade-down">
-                        <div class="card__image">
-                           <img src="img/services/03-icon.svg" width="88" height="85" alt="Icon">
-                        </div>
-                        <h3 class="card__title">
-                           SPACE PLANNING
-                        </h3>
-                        <p class="card__text">
-                           We create better interior experiences through our space planning services.
-                        </p>
-                     </div>
-                     <div class="services__card card" data-aos="fade-down">
-                        <div class="services__card card" data-aos="fade-down">
+                     <div class="services__column">
+                        <!-- data-aos="fade-down -->
+                        <div class="services__card card">
                            <div class="card__image">
-                              <img src="img/services/04-icon.svg" width="74.85" height="74.83" alt="Icon">
+                              <img src="img/services/01-icon.svg" width="90.12" height="89.75" alt="Icon">
                            </div>
                            <h3 class="card__title">
-                              PROJECT MANAGEMENT
+                              INTERIOR DESIGN
                            </h3>
                            <p class="card__text">
-                              We provide proper project management as it’s one of the main success factors in interior
-                              design.
+                              Interior design services offer a vast variety of solutions for our clients’ homes and
+                              offices.
                            </p>
+                        </div>
+                     </div>
+                     <div class="services__column">
+                        <div class="services__card card">
+                           <div class="card__image">
+                              <img src="img/services/02-icon.svg" width="110.28" height="73.26" alt="Icon">
+                           </div>
+                           <h3 class="card__title">
+                              DECORATIVE SERVICES
+                           </h3>
+                           <p class="card__text">
+                              Our professional decorators will be happy to help you change your house’s inner look.
+                           </p>
+                        </div>
+                     </div>
+                     <div class="services__column">
+                        <div class="services__card card">
+                           <div class="card__image">
+                              <img src="img/services/03-icon.svg" width="88" height="85" alt="Icon">
+                           </div>
+                           <h3 class="card__title">
+                              SPACE PLANNING
+                           </h3>
+                           <p class="card__text">
+                              We create better interior experiences through our space planning services.
+                           </p>
+                        </div>
+                     </div>
+                     <div class="services__column">
+                        <div class="services__card card" data-aos="fade-down">
+                           <div class="services__card card" data-aos="fade-down">
+                              <div class="card__image">
+                                 <img src="img/services/04-icon.svg" width="74.85" height="74.83" alt="Icon">
+                              </div>
+                              <h3 class="card__title">
+                                 PROJECT MANAGEMENT
+                              </h3>
+                              <p class="card__text">
+                                 We provide proper project management as it’s one of the main success factors in
+                                 interior
+                                 design.
+                              </p>
+                           </div>
                         </div>
                      </div>
                   </div>
@@ -99,7 +128,7 @@
             </div>
          </section>
 
-         <section class="page__portfolio portfolio none">
+         <section class="page__portfolio portfolio">
             <div class="portfolio__container">
                <h2 class="portfolio__title title">
                   Our <span>Portfolio</span>
@@ -253,8 +282,8 @@
          </section>
       </main>
       @@include('html/_footer.htm',{})
-      </div>
-      @@include('html/_js.htm',{})
+   </div>
+   @@include('html/_js.htm',{})
 </body>
 
 </html>
