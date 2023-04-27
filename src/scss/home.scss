@@ -12,6 +12,9 @@
    // .page__price
    &__price {
    }
+   // .page__question
+   &__question {
+   }
 }
 //====================================================================================================
 
@@ -259,13 +262,7 @@
    &__column {
       display: flex;
       flex-direction: column;
-      // padding: 0px 15px;
-      // flex: 0 1 33.333%;
-      /*запрещаем увеличиваться, разрешем уменьшаться, устанвливаем одинаковую ширину*/
       text-align: center;
-      // justify-content: center;
-
-      /*колонки становятся одинаковые по высоте - по самой высокой*/
    }
    // .prices__item
    &__item {
@@ -315,7 +312,6 @@
    }
    // .prices__button
    &__button {
-      //display: block;	/*ширину установим равной ширине блока*/
       display: inline-block;
       font-family: $fontFamily;
       text-align: center;
@@ -348,7 +344,6 @@
 
 .card {
    @include adaptiveValue("padding-top", 32, 26.5);
-   // @include adaptiveValue("padding-bottom", 32, -4);
    font-family: "BN Chester Pro";
    color: $mainColor;
 
@@ -413,3 +408,39 @@
 }
 
 //========================================================================================================================================================
+
+//========================================================================================================================================================
+.question {
+   @include adaptiveValue("padding-top", 73, 45);
+   @include adaptiveValue("padding-bottom", 73, 45);
+   background-color: #eafbfb;
+   // .question__container
+   &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      @media (max-width: $mobile) {
+         display: block;
+         text-align: center;
+      }
+   }
+   // .question__title
+   &__title {
+      display: inline-block;
+      max-width: rem(256);
+      @media (max-width: $mobile) {
+         text-align: center;
+         justify-content: center;
+         &:not(:last-child) {
+            margin-bottom: rem(35);
+         }
+      }
+   }
+   // .question__button
+   &__button {
+      font-weight: 700;
+      @media (max-width: $mobile) {
+         width: 100%;
+      }
+   }
+}

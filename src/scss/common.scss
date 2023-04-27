@@ -6,7 +6,8 @@
 
 .title {
    font-family: "BN Chester Regular";
-   font-size: rem(40);
+   // font-size: rem(40);
+   @include adaptiveValue("font-size", 40, 30);
    line-height: 102.5%; /* 41/40 */
    color: $mainColor;
    span {
@@ -37,4 +38,9 @@
    padding: rem(12) rem(34);
    border: rem(2) solid $pageColor;
    border-radius: rem(8);
+   transition: background-color 0.5s;
+   &:hover {
+      background-color: #d3a265;
+      color: #fff;
+   }
 }
