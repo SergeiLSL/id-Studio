@@ -45,9 +45,14 @@
    }
    // .about-page__title
    &__title {
+      // display: flex;
+      // flex-direction: column;
+      // display: block;
       max-width: rem(118);
       @media (max-width: $mobile) {
+         // position: relative;
          margin-bottom: rem(28);
+         // text-align: left;
       }
    }
    // .about-page__column-text
@@ -77,6 +82,10 @@
       margin-top: rem(27);
       padding-bottom: rem(2);
       border-bottom: 1px solid #d3a265;
+      transition: color 0.3s;
+      &:hover {
+         color: #d3a265;  
+      }
    }
 }
 
@@ -478,8 +487,10 @@
       display: inline-block;
       max-width: rem(256);
       @media (max-width: $mobile) {
-         text-align: center;
-         justify-content: center;
+         display: flex;
+         max-width: rem(205);
+         margin: 0 auto;
+         margin-bottom: rem(0);
          &:not(:last-child) {
             margin-bottom: rem(35);
          }
