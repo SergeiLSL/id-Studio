@@ -6,6 +6,9 @@
    // .home__services
    &__services {
    }
+   // .page__portfolio-work
+   &__portfolio-work {
+   }
    // .page__portfolio
    &__portfolio {
    }
@@ -106,13 +109,16 @@
 
 //========================================================================================================================================================
 .services {
-   @include adaptiveValue("padding-top", 80, 56);
-   @include adaptiveValue("padding-bottom", 80, 56);
+   @include adaptiveValue("padding-top", 80, 50);
+   @include adaptiveValue("padding-bottom", 80, 30);
+
    // .services__container
    &__container {
    }
    // .services__inner
    &__inner {
+      display: flex;
+      flex-direction: column;
       // padding: rem(0) rem(15);
    }
    // .services__title
@@ -134,6 +140,9 @@
       flex-wrap: wrap;
       justify-content: center;
       align-self: center;
+      &:not(:last-child) {
+         // margin-bottom: rem(84);
+      }
       @media (max-width: $mobile) {
          row-gap: rem(0);
       }
@@ -141,8 +150,6 @@
    // .services__column
    &__column {
       flex: 0 1 0%;
-      // min-width: rem(270);
-      // max-width: rem(270);
       margin: 0 auto;
       @media (max-width: $mobile) {
          padding-top: rem(52);
@@ -160,6 +167,16 @@
       margin: 0 auto;
       min-width: rem(270);
       max-width: rem(270);
+   }
+   // .services__button
+   &__button {
+      margin: 0px auto;
+      cursor: pointer;
+      justify-content: center;
+      margin-top: rem(80);
+      @media (max-width: $mobile) {
+         display: none;
+      }
    }
 }
 
@@ -190,99 +207,239 @@
    }
    // .card__text
    &__text {
+      font-family: "Gilroy";
       font-size: rem(16);
       line-height: 170%; /* 22/18 */
       color: #8d8d8d;
+      padding-bottom: rem(9.5);
    }
 }
 
 //========================================================================================================================================================
-
-.portfolio {
-   padding-top: 4.875rem;
-   padding-bottom: 4.875rem;
-   background-color: #eef8d9;
-   // .portfolio__container
+.work {
+   padding-top: rem(78);
+   padding-bottom: rem(78);
+   background-color: #f4f4f4;
+   // .work__container
    &__container {
    }
-   // .portfolio__title
+   // .work__title
    &__title {
-   }
-   // .portfolio__filter
-   &__filter {
-      margin-bottom: 1.25rem;
-   }
-   // .portfolio__items
-   &__items {
-      position: relative; // ? не работает!!!
-      width: 73.125rem; // ? не работает!!!
-      height: 41.875rem; // ? не работает!!!
-      margin: 0 auto;
-      transition: all 0.3s;
-      @media (max-width: 26.875rem) {
-         width: auto !important;
+      text-align: center;
+      @include adaptiveValue("margin-bottom", 85, 30);
+      @media (max-width: $mobile) {
+         display: flex;
+         max-width: rem(120);
+         margin: 0 auto;
+         margin-bottom: rem(0);
       }
    }
-   // .portfolio__item
-   &__item {
-      width: rem(270);
-      &:not(:last-child) {
-         // margin-bottom: 1.25rem;
-      }
-      @media (max-width: 26.875rem) {
-         width: 100%;
-      }
+   // .work__tabs
+   &__tabs {
    }
 }
 
-.filter-portfolio {
-   display: flex;
-   align-items: center;
-   column-gap: 1.875rem;
-   row-gap: 0.3125rem;
-   // .filter-portfolio__item
-   &__item {
-      font-size: 0.75rem;
-      line-height: 2;
-      color: #c4c4c4;
-      transition: all 0.3s;
-      &.active {
-         color: $pageColor;
+.tabs {
+   // .tabs__nav
+   &__nav {
+      display: flex;
+      column-gap: rem(59);
+      row-gap: rem(10);
+      flex-wrap: wrap;
+      margin-bottom: rem(35);
+   }
+   // .tabs__title
+   &__title {
+      font-size: rem(16);
+      line-height: 118.75%; /* 19/16 */
+      text-transform: uppercase;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.3s ease 0s;
+      background-color: transparent;
+      &::after {
+         content: "";
+         position: absolute;
+         bottom: 0px;
+         left: 0;
+         width: 0;
+         height: 1px;
+         transition: width 0.3s ease 0s;
+         background-color: #d3a265;
       }
       &:hover {
-         color: $pageColor;
+         color: #d3a265;
+         &::after {
+            width: 100%;
+         }
+      }
+      &._tab-active {
+         border: none;
+         color: #d3a265;
+         &::after {
+            width: 100%;
+         }
       }
    }
-}
-
-.article {
-   // .article__image
-   &__image {
-      display: block;
-      max-width: rem(270);
-      // margin-bottom: 1.875rem;
+   // .tabs__content
+   &__content {
+   }
+   // .tabs__body
+   &__body {
+   }
+   // .tabs__items
+   &__items {
+      display: grid;
+      gap: rem(30);
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+   }
+   // .tabs__item
+   &__item {
       position: relative;
-      height: rem(320);
-      border-radius: 0.625rem;
-      overflow: hidden;
-      /* padding-bottom: 60%; убрать после настройки карточки */
-      &:hover img {
-         transform: scale(1.03);
+   }
+   // .tabs__options
+   &__options {
+      position: absolute;
+      left: rem(14);
+      z-index: 2;
+      top: rem(14);
+      display: flex;
+      flex-wrap: wrap;
+      gap: rem(6);
+   }
+   // .tabs__option
+   &__option {
+      font-size: rem(12);
+      background-color: rgba(0, 0, 0, 0.4);
+      border: 1px solid #ffffff;
+      border-radius: 5px;
+      color: #fff;
+      padding: rem(6) rem(12);
+      transition: background-color 0.3s ease 0s;
+      &:hover {
+         background-color: rgba(0, 0, 0, 0.6);
       }
-      img.init {
+   }
+   // .tabs__image
+   &__image {
+      position: relative;
+      display: block;
+      padding-bottom: 118.52%;
+      border-radius: rem(10);
+      // max-width: rem(270);
+      overflow: hidden;
+      img {
+         transition: transform 0.3s ease 0s;
          position: absolute;
-         // max-width: rem(270);
          width: 100%;
          height: 100%;
-         height: rem(320);
          top: 0;
          left: 0;
          object-fit: cover;
-         transition: all 0.3s;
-         border-radius: 0.625rem;
+         &:hover {
+            transform: scale(1.1);
+         }
       }
    }
 }
+// . {
+//    // ._tab-active
+//    &_tab-active {
+//    }
+// }
+// .article {
+//    // .tabs__image
+//    &__image {
+//    }
+// }
+
+//========================================================================================================================================================
+
+// .portfolio {
+//    padding-top: 4.875rem;
+//    padding-bottom: 4.875rem;
+//    background-color: #eef8d9;
+//    // .portfolio__container
+//    &__container {
+//    }
+//    // .portfolio__title
+//    &__title {
+//    }
+//    // .portfolio__filter
+//    &__filter {
+//       margin-bottom: 1.25rem;
+//    }
+//    // .portfolio__items
+//    &__items {
+//       position: relative; // ? не работает!!!
+//       width: 73.125rem; // ? не работает!!!
+//       height: 41.875rem; // ? не работает!!!
+//       margin: 0 auto;
+//       transition: all 0.3s;
+//       @media (max-width: 26.875rem) {
+//          width: auto !important;
+//       }
+//    }
+//    // .portfolio__item
+//    &__item {
+//       width: rem(270);
+//       &:not(:last-child) {
+//          // margin-bottom: 1.25rem;
+//       }
+//       @media (max-width: 26.875rem) {
+//          width: 100%;
+//       }
+//    }
+// }
+
+// .filter-portfolio {
+//    display: flex;
+//    align-items: center;
+//    column-gap: 1.875rem;
+//    row-gap: 0.3125rem;
+//    // .filter-portfolio__item
+//    &__item {
+//       font-size: 0.75rem;
+//       line-height: 2;
+//       color: #c4c4c4;
+//       transition: all 0.3s;
+//       &.active {
+//          color: $pageColor;
+//       }
+//       &:hover {
+//          color: $pageColor;
+//       }
+//    }
+// }
+
+// .article {
+//    // .tabs__image
+//    &__image {
+//       display: block;
+//       max-width: rem(270);
+//       // margin-bottom: 1.875rem;
+//       position: relative;
+//       height: rem(320);
+//       border-radius: 0.625rem;
+//       overflow: hidden;
+//       /* padding-bottom: 60%; убрать после настройки карточки */
+//       &:hover img {
+//          transform: scale(1.03);
+//       }
+//       img.init {
+//          position: absolute;
+//          // max-width: rem(270);
+//          width: 100%;
+//          height: 100%;
+//          height: rem(320);
+//          top: 0;
+//          left: 0;
+//          object-fit: cover;
+//          transition: all 0.3s;
+//          border-radius: 0.625rem;
+//       }
+//    }
+// }
 
 //========================================================================================================================================================
 .price {
@@ -407,7 +564,7 @@
    // @include adaptiveValue("padding-top", 32, 26.5);
    font-family: "BN Chester Pro";
    color: $mainColor;
-   padding-top: rem(27);
+   // padding-top: rem(27);
    // .card__subtitle
    &__subtitle {
       font-size: rem(24);
@@ -474,45 +631,11 @@
    @include adaptiveValue("padding-top", 60, 40);
    @include adaptiveValue("padding-bottom", 60, 40);
    background: #f4f4f4;
-   // .what-say__container
-   &__container {
-   }
-   // .what-say__content
-   &__content {
-   }
-   // .what-say__begins
-   &__begins {
-   }
    // .what-say__title
    &__title {
       text-align: center;
       @include adaptiveValue("margin-bottom", 87, 45);
    }
-   // .what-say__items
-   &__items {
-      // display: flex;
-      // column-gap: rem(30); // убрать
-      // row-gap: rem(30); // убрать
-      // // flex-wrap: wrap;// убрать
-      // justify-content: center;
-      // @media (max-width: $tablet) {
-      //    flex-wrap: wrap; // убрать
-      // }
-   }
-   // .what-say__item
-   &__item {
-      // flex: 0 1 50%;
-      // max-width: rem(570);
-      // @media (max-width: $tablet) {
-      //    flex: 0 1 100%;
-      // }
-   }
-}
-
-
-
-/* ++++++++++++++++++++++++++++++++++ */
-.what-say {
    // .what-say__slider
    &__slider {
    }
@@ -530,11 +653,11 @@
       @include adaptiveValue("padding-bottom", 36, 10);
       @include adaptiveValue("padding-left", 91, 10);
 
-      @media (max-width: rem(1200)){
+      @media (max-width: rem(1200)) {
          @include adaptiveValue("padding-left", 56, 0);
          padding-left: rem(56);
       }
-      @media (max-width:$tablet){
+      @media (max-width: $tablet) {
          padding: rem(36) rem(43) rem(36) rem(25);
       }
       @media (max-width: $mobile) {
@@ -544,13 +667,6 @@
    // .what-say__item
    &__item {
    }
-}
-
-.swiper {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
 }
 
 .item-what {
@@ -583,8 +699,8 @@
    &__avatar {
       object-fit: cover;
       flex: 0 0 rem(172);
-		border-radius: 50%;
-		overflow: hidden;
+      border-radius: 50%;
+      overflow: hidden;
       img {
          border-radius: 50%;
          width: 100%;
@@ -634,12 +750,7 @@
    &__link {
    }
 }
-
-.swiper-pagination {
-}
-
-.swiper-horizontal > 
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.swiper-horizontal > .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
    width: rem(14);
    height: rem(14);
    background-color: #d3a265;
