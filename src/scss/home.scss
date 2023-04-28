@@ -524,10 +524,19 @@
    &__slide {
       background-color: #fff;
       border-radius: rem(10);
-      @include adaptiveValue("padding-top", 36, 20);
-      @include adaptiveValue("padding-right", 43, 20);
-      @include adaptiveValue("padding-bottom", 36, 30);
-      @include adaptiveValue("padding-left", 91, 20);
+      // padding: rem(36) rem(43) rem(36) rem(91);
+      @include adaptiveValue("padding-top", 36, 10);
+      @include adaptiveValue("padding-right", 43, 10);
+      @include adaptiveValue("padding-bottom", 36, 10);
+      @include adaptiveValue("padding-left", 91, 10);
+
+      @media (max-width: rem(1200)){
+         @include adaptiveValue("padding-left", 56, 0);
+         padding-left: rem(56);
+      }
+      @media (max-width:$tablet){
+         padding: rem(36) rem(43) rem(36) rem(25);
+      }
       @media (max-width: $mobile) {
          padding: rem(25) rem(24) rem(34) rem(25);
       }
@@ -562,7 +571,7 @@
    display: flex;
    align-items: center;
    margin-bottom: rem(30);
-   @include adaptiveValue("column-gap", 35, 10);
+   @include adaptiveValue("column-gap", 35, 0);
    @media (max-width: $mobile) {
       column-gap: rem(15);
    }
@@ -572,23 +581,19 @@
    }
    // .author-item__avatar
    &__avatar {
-      // width: rem(172);
-      // height: rem(172);
-      // border-radius: 50%;
       object-fit: cover;
       flex: 0 0 rem(172);
 		border-radius: 50%;
 		overflow: hidden;
       img {
-         width: rem(172);
-         height: rem(172);
          border-radius: 50%;
          width: 100%;
          height: auto;
       }
       @media (max-width: $mobile) {
-         width: rem(129);
-         height: rem(129);
+         // width: rem(129);
+         // height: rem(129);
+         flex: 0 0 rem(129);
          img {
             width: rem(129);
             height: rem(129);
