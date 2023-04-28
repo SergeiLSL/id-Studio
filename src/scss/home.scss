@@ -12,6 +12,9 @@
    // .page__price
    &__price {
    }
+   // .page__what-say
+   &__what-say {
+   }
    // .page__question
    &__question {
    }
@@ -84,7 +87,7 @@
       border-bottom: 1px solid #d3a265;
       transition: color 0.3s;
       &:hover {
-         color: #d3a265;  
+         color: #d3a265;
       }
    }
 }
@@ -466,12 +469,182 @@
 }
 
 //========================================================================================================================================================
+//========================================================================================================================================================
+.what-say {
+   @include adaptiveValue("padding-top", 60, 40);
+   @include adaptiveValue("padding-bottom", 60, 40);
+   background: #f4f4f4;
+   // .what-say__container
+   &__container {
+   }
+   // .what-say__content
+   &__content {
+   }
+   // .what-say__begins
+   &__begins {
+   }
+   // .what-say__title
+   &__title {
+      text-align: center;
+      @include adaptiveValue("margin-bottom", 87, 45);
+   }
+   // .what-say__items
+   &__items {
+      // display: flex;
+      // column-gap: rem(30); // убрать
+      // row-gap: rem(30); // убрать
+      // // flex-wrap: wrap;// убрать
+      // justify-content: center;
+      // @media (max-width: $tablet) {
+      //    flex-wrap: wrap; // убрать
+      // }
+   }
+   // .what-say__item
+   &__item {
+      // flex: 0 1 50%;
+      // max-width: rem(570);
+      // @media (max-width: $tablet) {
+      //    flex: 0 1 100%;
+      // }
+   }
+}
+
+
+
+/* ++++++++++++++++++++++++++++++++++ */
+.what-say {
+   // .what-say__slider
+   &__slider {
+   }
+   // .what-say__wrapper
+   &__wrapper {
+      padding-bottom: rem(56);
+   }
+   // .what-say__slide
+   &__slide {
+      background-color: #fff;
+      border-radius: rem(10);
+      @include adaptiveValue("padding-top", 36, 20);
+      @include adaptiveValue("padding-right", 43, 20);
+      @include adaptiveValue("padding-bottom", 36, 30);
+      @include adaptiveValue("padding-left", 91, 20);
+      @media (max-width: $mobile) {
+         padding: rem(25) rem(24) rem(34) rem(25);
+      }
+   }
+   // .what-say__item
+   &__item {
+   }
+}
+
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+
+.item-what {
+   // .item-what__author
+   &__author {
+   }
+   // .item-what__text
+   &__text {
+      max-width: rem(410);
+      padding-left: rem(10);
+      @media (max-width: $tablet) {
+         min-width: 100%;
+      }
+   }
+}
+
+.author-item {
+   display: flex;
+   align-items: center;
+   margin-bottom: rem(30);
+   @include adaptiveValue("column-gap", 35, 10);
+   @media (max-width: $mobile) {
+      column-gap: rem(15);
+   }
+   & > a:hover {
+      display: block;
+      text-decoration: none;
+   }
+   // .author-item__avatar
+   &__avatar {
+      // width: rem(172);
+      // height: rem(172);
+      // border-radius: 50%;
+      object-fit: cover;
+      flex: 0 0 rem(172);
+		border-radius: 50%;
+		overflow: hidden;
+      img {
+         width: rem(172);
+         height: rem(172);
+         border-radius: 50%;
+         width: 100%;
+         height: auto;
+      }
+      @media (max-width: $mobile) {
+         width: rem(129);
+         height: rem(129);
+         img {
+            width: rem(129);
+            height: rem(129);
+         }
+      }
+   }
+   // .author-item__body
+   &__body {
+      font-weight: 500;
+      font-size: rem(20);
+      line-height: 120%; /* 24/20 */
+   }
+   // .author-item__name
+   &__name {
+      &:not(:last-child) {
+         margin-bottom: rem(7);
+      }
+      @media (max-width: $mobile) {
+         font-size: rem(16);
+      }
+   }
+   // .author-item__position
+   &__position {
+      color: #b5b5b5;
+      @include adaptiveValue("margin-bottom", 38, 15);
+      @media (max-width: $mobile) {
+         font-size: rem(14);
+         margin-bottom: rem(20);
+      }
+   }
+   // .author-item__socials
+   &__socials {
+      display: flex;
+      gap: rem(16);
+      justify-content: start;
+   }
+   // .author-item__link
+   &__link {
+   }
+}
+
+.swiper-pagination {
+}
+
+.swiper-horizontal > 
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+   width: rem(14);
+   height: rem(14);
+   background-color: #d3a265;
+}
 
 //========================================================================================================================================================
 .question {
    @include adaptiveValue("padding-top", 73, 45);
    @include adaptiveValue("padding-bottom", 73, 45);
-   background-color: #eafbfb;
+   background-color: #fff;
    // .question__container
    &__container {
       display: flex;
