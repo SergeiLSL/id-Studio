@@ -9,6 +9,7 @@
       @@include('html/_header.htm',{})
       <main class="page">
 
+
          <section class="page__about about-page">
             <div class="about-page__container">
                <div class="about-page__body">
@@ -126,219 +127,79 @@
                         </div>
                      </div>
                   </div>
-                  <a href="" class="services__button btn">Free consultation</a>
+                  <a href="#" class="services__button btn">Free consultation</a>
                </div>
             </div>
          </section>
 
-         <section class="page__portfolio-work work">
-            <div class="work__container">
-               <h2 class="work__title title">
-                  Our <span>Portfolio</span>
-               </h2>
-               <div data-tabs class="work__tabs tabs">
-                  <nav data-tabs-titles class="tabs__nav">
-                     <button type="button" class="tabs__title  _tab-active">All</button>
-                     <button type="button" class="tabs__title">COMERCIAL</button>
-                     <button type="button" class="tabs__title">RESIDENTIAL</button>
-                     <button type="button" class="tabs__title">OFFICE</button>
-                     <button type="button" class="tabs__title">OTHER</button>
-                  </nav>
-                  <div data-tabs-body class="tabs__content">
-
-                     <div class="tabs__body">
-                        <div class="tabs__items">
-                           <div class="tabs__item">
-                              <a href="#" class="tabs__image">
-                                 <img src="@img/portfolio/01-other.jpg" alt="">
-                              </a>
-                           </div>
-                           <div class="tabs__item">
-                              <a href="#" class="tabs__image">
-                                 <img src="@img/portfolio/02-other.jpg" alt="">
-                              </a>
-                           </div>
-                           <div class="tabs__item">
-                              <a href="#" class="tabs__image">
-                                 <img src="@img/portfolio/03-comercial.jpg" alt="">
-                              </a>
-                           </div>
-                           <div class="tabs__item">
-                              <a href="#" class="tabs__image">
-                                 <img src="@img/portfolio/04-other.jpg" alt="">
-                              </a>
-                           </div>
-                           <div class="tabs__item">
-                              <a href="#" class="tabs__image">
-                                 <img src="@img/portfolio/05-comercial.jpg" alt="">
-                              </a>
-                           </div>
-                           <div class="tabs__item">
-                              <a href="#" class="tabs__image">
-                                 <img src="@img/portfolio/06-office.jpg" alt="">
-                              </a>
-                           </div>
-                           <div class="tabs__item">
-                              <a href="#" class="tabs__image">
-                                 <img src="@img/portfolio/07-residental.jpg" alt="">
-                              </a>
-                           </div>
-                           <div class="tabs__item">
-                              <a href="#" class="tabs__image">
-                                 <img src="@img/portfolio/08-residental.jpg" alt="">
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="tabs__body">
-                        <div class="tabs__items">
-                           <div class="tabs__item">
-                              <a href="#" class="tabs__image">
-                                 <img src="@img/portfolio/03-comercial.jpg" alt="">
-                              </a>
-                           </div>
-                           <div class="tabs__item">
-                              <a href="#" class="tabs__image">
-                                 <img src="@img/portfolio/05-comercial.jpg" alt="">
-                              </a>
-                           </div>
-                           <div class="tabs__item">
-                              <a href="#" class="tabs__image">
-                                 <img src="@img/portfolio/03-comercial.jpg" alt="">
-                              </a>
-                           </div>
-                           <div class="tabs__item">
-                              <a href="#" class="tabs__image">
-                                 <img src="@img/portfolio/05-comercial.jpg" alt="">
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="tabs__body">
-                        <div class="tabs__items">
-                           <div class="tabs__item">
-                              <a href="#" class="tabs__image">
-                                 <img src="@img/portfolio/07-residental.jpg" alt="">
-                              </a>
-                           </div>
-                           <div class="tabs__item">
-                              <a href="#" class="tabs__image">
-                                 <img src="@img/portfolio/02-other.jpg" alt="">
-                              </a>
-                           </div>
-                           <div class="tabs__item">
-                              <a href="#" class="tabs__image">
-                                 <img src="@img/portfolio/08-residental.jpg" alt="">
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="tabs__body">
-                        <div class="tabs__items">
-                           <div class="tabs__item">
-                              <a href="#" class="tabs__image">
-                                 <img src="@img/portfolio/06-office.jpg" alt="">
-                              </a>
-                           </div>
-                           <div class="tabs__item">
-                              <a href="#" class="tabs__image">
-                                 <img src="@img/portfolio/03-comercial.jpg" alt="">
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="tabs__body">
-                        <div class="tabs__items">
-                           <div class="tabs__item">
-                              <a href="#" class="tabs__image">
-                                 <img src="@img/portfolio/04-other.jpg" alt="">
-                              </a>
-                           </div>
-                           <div class="tabs__item">
-                              <a href="#" class="tabs__image">
-                                 <img src="@img/portfolio/01-other.jpg" alt="">
-                              </a>
-                           </div>
-                           <div class="tabs__item">
-                              <a href="#" class="tabs__image">
-                                 <img src="@img/portfolio/02-other.jpg" alt="">
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
-
-         <section class="page__portfolio portfolio none">
+         <section class="page__portfolio portfolio">
             <div class="portfolio__container">
-               <h2 class="portfolio__title title">
-                  Our <span>Portfolio</span>
-               </h2>
-               <div class="portfolio__filter filter-portfolio">
-                  <button data-filter="*" class="filter-portfolio__item text-nav active" type="button">
-                     All
-                  </button>
-                  <button data-filter="comercial" class="filter-portfolio__item text-nav" type="button">
-                     COMERCIAL
-                  </button>
-                  <button data-filter="residential" class="filter-portfolio__item text-nav" type="button">
-                     RESIDENTIAL
-                  </button>
-                  <button data-filter="office" class="filter-portfolio__item text-nav" type="button">
-                     OFFICE
-                  </button>
-                  <button data-filter="other" class="filter-portfolio__item text-nav" type="button">
-                     OTHER
-                  </button>
+               <!-- <div class="portfolio__content"> -->
+               <h2 class="portfolio__title title">Our <span>Portfolio</span></h2>
+               <div class="portfolio__items items-portfolio">
+                  <div class="items-portfolio__top-menu">
+                     <nav class="items-portfolio__navigation"> <button data-work-type=""
+                           class="items-portfolio__type active">All</button>
+                        <button data-work-type="comercial" class="items-portfolio__type">COMERCIAL</button>
+                        <button data-work-type="resident" class="items-portfolio__type">RESIDENTIAL</button>
+                        <button data-work-type="office" class="items-portfolio__type">OFFICE</button>
+                        <button data-work-type="other" class="items-portfolio__type">OTHER</button>
+                     </nav>
+                     <a href="#" data-da=".portfolio__items,560" class="items-portfolio__button">VIEW MORE</a>
+                  </div>
+                  <div class="items-portfolio__body">
+                     <a data-work-type="other" href="#" class="items-portfolio__item">
+                        <div class="items-portfolio__image">
+                           <img src="img/portfolio/01-other.jpg" alt="Image">
+                        </div>
+                     </a>
+
+                     <a data-work-type="other" href="#" class="items-portfolio__item">
+                        <div class="items-portfolio__image">
+                           <img src="img/portfolio/02-other.jpg" alt="Image">
+                        </div>
+                     </a>
+
+                     <a data-work-type="comercial" href="#" class="items-portfolio__item">
+                        <div class="items-portfolio__image">
+                           <img src="img/portfolio/03-comercial.jpg" alt="Image">
+                        </div>
+                     </a>
+
+                     <a data-work-type="other" href="#" class="items-portfolio__item">
+                        <div class="items-portfolio__image">
+                           <img src="img/portfolio/04-other.jpg" alt="Image">
+                        </div>
+                     </a>
+
+                     <a data-work-type="comercial" href="#" class="items-portfolio__item">
+                        <div class="items-portfolio__image">
+                           <img src="img/portfolio/05-comercial.jpg" alt="Image">
+                        </div>
+                     </a>
+
+                     <a data-work-type="office" href="#" class="items-portfolio__item">
+                        <div class="items-portfolio__image">
+                           <img src="img/portfolio/06-office.jpg" alt="Image">
+                        </div>
+                     </a>
+
+                     <a data-work-type="resident" href="#" class="items-portfolio__item">
+                        <div class="items-portfolio__image">
+                           <img src="img/portfolio/07-residental.jpg" alt="Image">
+                        </div>
+                     </a>
+
+                     <a data-work-type="resident" href="#" class="items-portfolio__item">
+                        <div class="items-portfolio__image">
+                           <img src="img/portfolio/08-residental.jpg" alt="Image">
+                        </div>
+                     </a>
+
+
+                  </div>
                </div>
-               <div class="portfolio__items">
-                  <div data-filter="comercial" class="portfolio__item article">
-                     <a href="#" class="tabs__image">
-                        <img src="@img/portfolio/03-comercial.jpg" alt="">" alt="Image">
-                     </a>
-                  </div>
-                  <div data-filter="residential" class="portfolio__item article">
-                     <a href="#" class="tabs__image">
-                        <img src="@img/portfolio/07-residental.jpg" alt="">" alt="Image">
-                     </a>
-                  </div>
-                  <div data-filter="other" class="portfolio__item article">
-                     <a href="#" class="tabs__image">
-                        <img src="@img/portfolio/04-other.jpg" alt="">" alt="Image">
-                     </a>
-                  </div>
-                  <div data-filter="comercial" class="portfolio__item article">
-                     <a href="#" class="tabs__image">
-                        <img src="@img/portfolio/05-comercial.jpg" alt="">" alt="Image">
-                     </a>
-                  </div>
-                  <div data-filter="residential" class="portfolio__item article">
-                     <a href="#" class="tabs__image">
-                        <img src="@img/portfolio/08-residental.jpg" alt="">" alt="Image">
-                     </a>
-                  </div>
-                  <div data-filter="office" class="portfolio__item article">
-                     <a href="#" class="tabs__image">
-                        <img src="@img/portfolio/06-office.jpg" alt="">" alt="Image">
-                     </a>
-                  </div>
-                  <div data-filter="other" class="portfolio__item article">
-                     <a href="#" class="tabs__image">
-                        <img src="@img/portfolio/01-other.jpg" alt="">" alt="Image">
-                     </a>
-                  </div>
-                  <div data-filter="other" class="portfolio__item article">
-                     <a href="#" class="tabs__image">
-                        <img src="@img/portfolio/02-other.jpg" alt="">" alt="Image">
-                     </a>
-                  </div>
-               </div>
+               <!-- </div> -->
             </div>
          </section>
 
@@ -594,6 +455,48 @@
                            </a>
                         </div>
 
+                        <div class="what-say__slide swiper-slide">
+                           <a href="#" class="what-say__item item-what">
+                              <div class="item-what__author author-item">
+                                 <div class="author-item__avatar">
+                                    <img src="@img/what-say/03.jpg" alt="avatar">
+                                 </div>
+
+                                 <div class="author-item__body">
+                                    <div class="author-item__name">Alexa Biru</div>
+                                    <div class="author-item__position">Office Director</div>
+                                    <!--? ссылка в ссылке https://www.tune-it.ru/web/leksa/blog/-/blogs/1996233 -->
+                                    <div class="author-item__socials">
+                                       <object>
+                                          <a href="#" class="author-item__link">
+                                             <img src="@img/footer/twitter.svg" alt="Icon">
+                                          </a>
+                                       </object>
+                                       <object>
+                                          <a href="#" class="author-item__link">
+                                             <img src="@img/footer/insta.svg" alt="Icon">
+                                          </a>
+                                       </object>
+                                       <object>
+                                          <a href="#" class="author-item__link">
+                                             <img src="@img/footer/facebook.svg" alt="Icon">
+                                          </a>
+                                       </object>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="item-what__text text">
+                                 <p>
+                                    Leo viverra vestibulum amet, scelerisque. Vitae, ultrices mi rhoncus porttitor nulla
+                                    sed
+                                    sodales. Curabitur tellus massa, lacinia non at. Lacus, hac fermentum, viverra
+                                    tortor,
+                                    eget. Eget egestas eget ultrices vitae.
+                                 </p>
+                              </div>
+                           </a>
+                        </div>
+
                      </div>
                      <!-- Пагинация -->
                      <div class="swiper-pagination"></div>
@@ -610,6 +513,7 @@
                <a href="" class="question__button btn">order a call</a>
             </div>
          </section>
+
       </main>
       @@include('html/_footer.htm',{})
    </div>
