@@ -547,12 +547,12 @@
    &__slide {
       background-color: #fff;
       border-radius: rem(10);
-      // padding: rem(36) rem(43) rem(36) rem(91);
+      position: relative;
       @include adaptiveValue("padding-top", 36, 10);
       @include adaptiveValue("padding-right", 43, 10);
       @include adaptiveValue("padding-bottom", 36, 10);
       @include adaptiveValue("padding-left", 91, 10);
-
+      z-index: 1;
       @media (max-width: rem(1200)) {
          @include adaptiveValue("padding-left", 56, 0);
          padding-left: rem(56);
@@ -563,6 +563,17 @@
       @media (max-width: $mobile) {
          padding: rem(25) rem(24) rem(34) rem(25);
       }
+      &::after {
+         position: absolute;
+         content: "";
+         width: 100%;
+         height: rem(1);
+         background: #dcd1bb;
+         top: rem(138);
+         left: 0;
+         z-index: -1;
+      }
+
    }
    // .what-say__item
    &__item {

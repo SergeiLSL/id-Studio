@@ -1,6 +1,245 @@
 //====================================================================================================
+//========================================================================================================================================================
+.header {
+	background: #e5e5e5;
+	@include adaptiveValue("padding-top", 31, 20);
+	@include adaptiveValue("padding-bottom", 31, 20);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+   // .header__container
+   &__container {
+   }
+   // .header__inner
+   &__inner {
+      display: flex;
+   }
+   // .header__column
+   &__column {
+      flex: 0 1 50%;
+      display: flex;
+      align-items: center;
+   }
+   // .header__contact
+   &__contact {
+      flex: 0 1 50%;
+      display: flex;
+      align-items: center;
+      column-gap: rem(45);
+      justify-content: end;
+   }   
+   // .header__logo
+   &__logo {
+		position: relative;
+		z-index: 5;
+		width: rem(131);
+		height: rem(23.06);
+		@include adaptiveValue("margin-right", 68, 0);
+   }
+   // .header__menu
+   &__menu {
+   }
+   // .header__phone
+   &__phone {
+      @media (max-width:rem(550)){
+         display: none;
+      }
+   }
+   // .header__language
+   &__language {
+      @media (max-width:rem(550)){
+         display: none;
+      }
+   }
+}
 
-//====================================================================================================
+.menu {
+   flex: 1 1 auto;
+   // .menu__body
+   &__body {
+   }
+   // .menu__list
+	&__list {
+      display: flex;
+      align-items: center;
+      column-gap: rem(45);
+		// justify-content: flex-end;
+		> li {
+			position: relative;
+			// @include adaptiveValue("margin-left", 80, 40);
+		}
+		@media (min-width: $mobile) {
+			display: flex;
+			align-items: center;
+			> li {
+				// эти отступы сверху/снизу расширяют область наведения мыши
+				padding: rem(10) 0;
+			}
+		}
+      @media (max-width:$mobile){
+         display: block; 
+      }
+	}
+   // .menu__link
+   &__link {
+		font-size: rem(16);
+		line-height: 118.75%; /* 19/16 */
+		font-weight: 500;
+		color: #352C2C;
+      display: inline-block;
+      padding-bottom: rem(3);
+      position: relative;
+      transition: all 0.5s;
+		&:hover {
+			// text-decoration: underline;
+         color: #D3A265; 
+		}
+      &::after {
+         position: absolute;
+         content: "";
+         height: 2px;
+         background-color: #D3A265; 
+         bottom: 0;
+         left: 50%;
+         width: 0;
+         transition: all 0.3s;
+      }
+      &:hover::after {
+         left: 0;
+         width: 100%;
+      }      
+   }
+   // .menu__icon
+   &__icon {
+   }
+}
+.icon-menu {
+}
+
+.menu {
+
+	// .menu__icon
+	&__icon {
+		//чтобы заработало бургер, скроем menu icon
+		display: none;
+	}
+}
+// //==================================
+
+@media (max-width: $mobile) {
+	.menu__icon {
+		display: block;
+		z-index: 5;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		cursor: pointer;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: #000;
+		}
+		&::before,
+		&::after {
+			content: "";
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			// добавляем среднюю полоску
+			top: 50%;
+			transform: scale(1) translate(0, -50%);
+			//top: calc(50% - rem(1)); // заменяет эти две записи
+		}
+	}
+
+	.menu__icon._active span {
+		// убираем среднюю полоску при классе _active
+		transform: scale(0) translate(0, -50%);
+	}
+
+	.menu__icon._active::before {
+		// поворачиваем верхнюю полоску при классе _active
+		top: 50%;
+		transform: rotate(-45deg) translate(0, -50%);
+	}
+
+	.menu__icon._active::after {
+		// поворачиваем нижнюю полоску при классе _active
+		bottom: 50%;
+		transform: rotate(45deg) translate(0, 50%);
+	}
+
+	// по идее сверху это закоментированный код бургера
+	.menu__body {
+		position: fixed;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		color: #352C2C;
+		background-color: rgba(255, 255, 255, 1);
+		padding: rem(120) rem(30) rem(30) rem(30);
+		text-align: center;
+		transition: left 0.3s ease 0s; // убираем за экран влево
+		overflow: auto; // обязательно добавить, чтобы появлялся скролл, если меню не будет помещаться на экране
+	}
+
+	.menu__body._active {
+		left: 0%;
+	}
+
+	.menu__body::before {
+		// чтобы меню уходило под плашку header
+		content: "";
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		height: rem(70);
+		// background-color: #912105;
+		z-index: 2;
+	}
+
+	.menu__list > li {
+		//flex-wrap: wrap;
+		margin: 0 0 rem(40) 0;
+		:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.menu__list > li._active .menu__sub-list {
+		display: block;
+	}
+	.menu__link {
+		font-size: rem(30);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //Burger
 /*
