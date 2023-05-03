@@ -11,8 +11,8 @@
 	&__title {
 		color: inherit;
 		text-align: left;
-		border: 1px solid #d9d9d9;
-		background-color: #fff;
+		// border: 1px solid #d9d9d9;
+		// background-color: #fff;
 		cursor: pointer;
 		width: 100%;
 		border-radius: 4px;
@@ -74,9 +74,9 @@
 		border-radius: 0 0 4px 4px;
 		min-width: 100%;
 		left: 0;
-		background-color: #fff;
+		// background-color: #fff;
 		border-top: 0;
-		border: 1px solid #d9d9d9;
+		// border: 1px solid #d9d9d9;
 		border-top: 0;
 		padding: 10px 0px 5px 0px;
 	}
@@ -101,11 +101,11 @@
 		padding: 5px 15px;
 		color: inherit;
 		&._select-selected {
-			background-color: #eee;
+			// background-color: #eee;
 		}
 		@media (any-hover: hover) {
 			&:hover {
-				background: #d9d9d9;
+				// background: #d9d9d9;
 			}
 		}
 	}
@@ -124,7 +124,7 @@
 		.select__options {
 			top: auto;
 			bottom: calc(100% - rem(1));
-			border: 1px solid #d9d9d9;
+			// border: 1px solid #d9d9d9;
 			border-bottom: 0;
 			border-radius: 4px 4px 0 0;
 			padding: 5px 0px 10px 0px;

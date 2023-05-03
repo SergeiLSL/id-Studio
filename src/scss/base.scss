@@ -91,7 +91,7 @@
 		height: 100%;
 	}
 }
-// Відео як фон
+// Видео как фон
 %videoBackground {
 	video,
 	iframe,
@@ -109,7 +109,7 @@
 		background-size: cover;
 	}
 }
-// Сірий фільтр
+// Серый фильтр
 %grayfilter {
 	transition: all 0.3s ease 0s;
 	filter: grayscale(1);
@@ -119,19 +119,19 @@
 		}
 	}
 }
-// Скасувати виділення
+// // Отменить выделение
 %noselect {
 	user-select: none;
 }
-// Дзеркальне відображення
+// Зеркальное отражение
 %mirror {
 	transform: scale(-1, 1);
 }
-// Плавний скролл
+// Плавный скролл
 %smoothscroll {
 	-webkit-overflow-scrolling: touch;
 }
-// Сховати скролл
+// Скрыть скролл
 %hidescroll {
 	&::-webkit-scrollbar {
 		display: none;

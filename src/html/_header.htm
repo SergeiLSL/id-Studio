@@ -15,8 +15,29 @@
             </div>
          </div>
          <div class="header__contact">
-            <button type="button" class="header__phone">(303) 555-0105</button>
-            <div class="header__language">EN</div>
+            <a data-da=".menu__list,767.98" href="tel:3035550105" class="header__phone">(303) 555-0105</a>
+            
+            <!-- убрать класс none, если надо значения -->
+            <!-- <select class="sel-menu none" name="form[]" data-class-modif="form">
+               <option class="sel-item" value="en" selected>EN</option>
+               <option class="sel-item" value="ru">RU</option>
+               <option class="sel-item" value="de">DE</option>
+               <option class="sel-item" value="fr">FR</option>
+            </select> -->
+
+            <div data-da=".menu__list,767.98" class="lng">
+               <a href="#" class="lng__link">EN</a>
+               <div class="lng__list-wrapper">
+                  <div class="lng__list">
+                     <a href="#">RU</a>
+                     <a href="#">DE</a>
+                     <!-- <a href="#">FR</a> -->
+                  </div>
+               </div>
+            </div>
+
+
+
             <div class="menu__icon icon-menu"><span></span></div>
          </div>
       </div>
