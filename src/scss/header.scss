@@ -2,6 +2,7 @@
 //========================================================================================================================================================
 .header {
    background-color: #f4f4f4;
+   background: transparent;
    @include adaptiveValue("padding-top", 31, 20);
    @include adaptiveValue("padding-bottom", 31, 20);
    position: fixed;
@@ -269,7 +270,7 @@
    font-size: rem(16);
    line-height: 118.75%; /* 19/16 */
    color: #161616;
-   background-color: #f4f4f4;
+   background-color: transparent;
    margin-right: rem(15);
    @media (max-width: $mobile) {
       font-size: rem(26);
@@ -289,6 +290,7 @@
       position: relative;
       padding-right: rem(5);
       top: 2px;
+      background-color: transparent;
       transition: color 0.3s ease;
       &::after {
          position: absolute;
